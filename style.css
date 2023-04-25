@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white-main-p: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--Very-dark-blue);
+}
+
+main {
+    padding: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--Dark-desaturated-blue);
+    border-radius: 10px;
+}
+
+.card-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5rem;
+}
+
+.card-text h1 {
+    color: var(--White);
+}
+
+.card-text h1 span {
+    color: var(--Soft-violet);
+}
+
+.card-text .main-p {
+    color: var(--Slightly-transparent-white-main-p);
+    font-size: 15px;
+    margin-top: 1.5rem;
+    line-height: 24px;
+}
+
+.card-text .achievements {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 65px;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.card-text .achievements h3 {
+    font-size: 23px;
+    color: var(--White);
+    padding-bottom: .5rem;
+}
+.card-text .achievements h6 {
+    font-size: 13px;
+    color: var(--Slightly-transparent-white);
+    letter-spacing: 2px;
+}
+
+.card-image {
+    background-color: var(--Soft-violet);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.card-image img{
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+    width: 500px;
+    background-blend-mode: multiply;
+    background-color: var(--Soft-violet);
+    height: 100%;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+@media (max-width: 400px) {
+    .card {
+        flex-direction: column-reverse;
+    }
+    .card-text {
+        text-align: center;
+    }
+    .card-text .achievements {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 3rem;
+    }
+    
+    .card-image {
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .card-image img{
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        height: 100%;
+    }
+}
